@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import java.util.ArrayList?>
+
+<AnchorPane fx:id="textFieldComment" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.gov.pallisanchaybank.controller.ApplicationController">
+   <children>
+      <Label layoutX="25.0" layoutY="38.0" prefHeight="17.0" prefWidth="42.0" text="Date" />
+      <DatePicker fx:id="datePicker" layoutX="111.0" layoutY="33.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="306.0" layoutY="37.0" prefHeight="17.0" prefWidth="77.0" text="Despatch NO" />
+      <TextField fx:id="textFieldDespatch1" layoutX="399.0" layoutY="32.0" prefHeight="25.0" prefWidth="72.0" />
+      <TextField fx:id="textFieldDespatch2" layoutX="493.0" layoutY="32.0" prefHeight="25.0" prefWidth="72.0" />
+      <Label layoutX="24.0" layoutY="79.0" prefHeight="28.0" prefWidth="80.0" text="Branch Code" />
+      <TextField fx:id="textFieldBranchCode" layoutX="111.0" layoutY="80.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="306.0" layoutY="80.0" prefHeight="25.0" prefWidth="72.0" text="Branch Name" />
+      <TextField fx:id="textFieldBranchName" focusTraversable="false" layoutX="402.0" layoutY="80.0" prefHeight="25.0" prefWidth="173.0" />
+      <Label layoutX="24.0" layoutY="131.0" text="District" />
+      <TextField fx:id="textFieldDistrict" focusTraversable="false" layoutX="111.0" layoutY="127.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="307.0" layoutY="131.0" text="Mobile NO" />
+      <TextField fx:id="textFieldMobile" focusTraversable="false" layoutX="402.0" layoutY="127.0" prefHeight="25.0" prefWidth="173.0" />
+      <Label layoutX="25.0" layoutY="178.0" prefHeight="17.0" prefWidth="49.0" text="Serial" />
+      <TextField fx:id="textFieldSerial" layoutX="61.0" layoutY="174.0" prefHeight="25.0" prefWidth="117.0" />
+      <Label layoutX="196.0" layoutY="179.0" prefHeight="17.0" prefWidth="49.0" text="ASSET" />
+      <ComboBox fx:id="comboBoxAsset" layoutX="234.0" layoutY="174.0" prefHeight="25.0" prefWidth="107.0" promptText="Select Asset" />
+      <TextArea fx:id="textAreaComment" layoutX="418.0" layoutY="165.0" prefHeight="39.0" prefWidth="107.0" />
+      <Button fx:id="btnAdd" disable="true" layoutX="534.0" layoutY="174.0" mnemonicParsing="false" onAction="#onAddBtnClicked" prefHeight="25.0" prefWidth="42.0" text="ADD" />
+      <TableView fx:id="tbData" layoutX="24.0" layoutY="218.0" prefHeight="182.0" prefWidth="556.0">
+        <columns>
+            <TableColumn id="slColumn" fx:id="slColumn" prefWidth="45.0" text="SL" />
+          <TableColumn id="assetColumn" fx:id="assetColumn" prefWidth="159.0" text="ASSET" />
+          <TableColumn id="serialColumn" fx:id="serialColumn" prefWidth="158.0" text="SERIAL" />
+            <TableColumn fx:id="commentColumn" minWidth="0.0" prefWidth="132.0" text="Comment" />
+            <TableColumn fx:id="actionColumn" prefWidth="61.0" text="ACTION" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSave" disable="true" layoutX="280.0" layoutY="410.0" mnemonicParsing="false" onAction="#onSaveFieldBranchCode" text="SAVE" />
+      <Label layoutX="484.0" layoutY="35.0" text="(" />
+      <Label layoutX="569.0" layoutY="35.0" prefHeight="17.0" prefWidth="13.0" text=")" />
+      <Label layoutX="357.0" layoutY="178.0" text="Comment" />
+   </children>
+</AnchorPane>

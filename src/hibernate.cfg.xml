@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+      <property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+      <property name = "hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+      
+      <!-- Assume test is the database name -->
+      <property name="hibernate.connection.characterEncoding">utf8</property> 
+      <property name = "hibernate.connection.url">jdbc:mysql://localhost/database</property>
+      <property name="hibernate.enable_lazy_load_no_trans">true</property>
+      <property name = "hibernate.connection.username">root</property>      
+      <!-- <property name = "hibernate.connection.password">1234</property> -->
+      <!-- <property name="hbm2ddl.auto">create</property> -->
+      <mapping class="bd.gov.pallisanchaybank.model.Branch"/>
+      <mapping class="bd.gov.pallisanchaybank.model.Calan"/>
+      <mapping class="bd.gov.pallisanchaybank.model.Asset"/>
+      
+   </session-factory>
+</hibernate-configuration>
