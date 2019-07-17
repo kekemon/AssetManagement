@@ -1,4 +1,4 @@
-package bd.gov.pallisanchaybank.model;
+package bd.gov.pallisanchaybank.helpers;
 
 import java.util.List;
 import java.util.Set;
@@ -17,6 +17,9 @@ import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import bd.gov.pallisanchaybank.model.Asset;
+import bd.gov.pallisanchaybank.model.Branch;
+import bd.gov.pallisanchaybank.model.Calan;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Alert.AlertType;
@@ -55,6 +58,21 @@ public class BranchUtils {
 		}
 		tx.commit();
 		bufferedReader.close();
+	}
+	
+	public static List<Branch> getBranchList(){
+		Session session = factory.openSession();
+		Transaction tx = null;
+		try {
+			tx = session.beginTransaction();
+			List<Branch> branches = session.createCriteria(Branch.class).list(); 
+			tx.commit();
+			return branches;
+		} catch (HibernateException e) {
+		} finally {
+			session.close();
+		}
+		return null;
 	}
 	
 	public static Branch getBranchBy(int branchCode){
