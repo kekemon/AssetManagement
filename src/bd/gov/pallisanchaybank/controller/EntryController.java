@@ -220,7 +220,7 @@ public class EntryController implements Initializable{
 		}
 		branch.setBranchName(textFieldBranchName.getText());
 		
-		System.out.println(branch.getBranchName());
+		//System.out.println(branch.getBranchName());
 		branch.setDistrict(textFieldDistrict.getText());
 		branch.setDistrict(textFieldDistrict.getText());
 		ObservableList<TableModel> list = tbData.getItems();
